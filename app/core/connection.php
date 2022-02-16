@@ -8,9 +8,9 @@ class Connection {
         $this->servername="localhost";
         $this->username="root";
         $this->password="";
-        $this->dbname="school";
-        $conn = new mysqli("localhost","root","","school"); 
-        return $conn;
+        $this->dbname="flightdream";
+        $conn = new mysqli("localhost","root","","flightdream"); 
+        return $conn; 
     }
    
 }
