@@ -27,14 +27,14 @@
         <td><?=$datavalue['price']."<br>"?></td>
         <td>
             <form action="deleteflight" method="post">
-                <input type="hidden" name='delete' value="<?=$datavalue['id']." "?>" >
+                <input type="hidden" name='delete' value="<?=$datavalue['id']?>" >
                 <button type="submit"></button>
             </form>
          </td>
          <td>
-            <form action="editflight" method="post">
-                <input type="hidden" name='edit' value="<?=$datavalue['id']." "?>" >
-                <button type="submit"></button>
+            <form action="<?= URL ?>admins/showForm" method="post">
+                <input type="hidden" name='edit' value="<?=$datavalue['id']?>" >
+                <button type="submit">Update</button>
             </form>
          </td>
     </tr>
@@ -51,15 +51,6 @@
         <button style="background-color: black; width: 158px; height: 40px;color: white; border-radius: 20px;">Add </button>
     </form>
 
-    <!-- <form action="< ?= URL ?>admins/editflight" method="post">
-        <input  type="text" name="departurePlace" placeholder="departurePlace">
-        <input type="text" name="arrivalPlace"  placeholder="arrivalPlace">
-        <input type="text" name="departureDate"  placeholder="departureDate">
-        <input type="text" name="passengerNumber" placeholder="passengerNumber">
-        <input type="text" name="placeNumber" placeholder="placeNumber">
-        <input type="text" name="price" placeholder="price">
-        <button style="background-color: black; width: 158px; height: 40px;color: white; border-radius: 20px;">Edit </button>
-    </form> -->
-      
+    
 </body>
 </html>

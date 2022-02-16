@@ -32,7 +32,7 @@ class admins extends controller {
    }
    public function editflight(){
     if($_SERVER['REQUEST_METHOD']=='POST')  {
-      $id=$_POST['edit'];
+      $id=$_POST['id'];
       $departurePlace =$_POST['departurePlace'];
       $arrivalPlace=$_POST['arrivalPlace'];
       $departureDate=$_POST['departureDate'];
@@ -41,9 +41,15 @@ class admins extends controller {
       $price=$_POST['price'];
       $this->model=$this->model('admin');  
       $this->model->update($id,$departurePlace,$arrivalPlace ,$departureDate,$passengerNumber,$placeNumber,$price);
-    
    }
  }
+
+ public function showForm(){
+   if(isset($_POST['edit'])){
+    $this->view('home/editadminflight', ['id' =>$_POST['edit']]);
+   }
+ }
+  
 
 
 
